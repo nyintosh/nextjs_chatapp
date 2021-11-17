@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Roboto+Mono:wght@400;500;600&display=swap');
+@import 'colors';
+
+*,
+*::before,
+*::after
+{
+	font            : inherit;
+	box-sizing      : border-box;
+	margin          : 0;
+	padding         : 0;
+	text-decoration : none;
+	color           : inherit;
+	outline         : none;
+}
+
+::-webkit-scrollbar
+{
+	width            : 10px;
+	cursor           : pointer;
+	background-color : $white-100;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color : $white-100;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border           : 2.5px solid $white-100;
+	border-radius    : 100px;
+	background-color : transparent;
+
+	&:hover
+	{
+		border : 0 solid $white-100;
+	}
+}
+
+::-moz-selection
+{
+	color            : $white-100;
+	background-color : transparentize($deep-blue, 0.2);
+}
+
+::selection
+{
+	color            : $white-100;
+	background-color : transparentize($deep-blue, 0.2);
+}
+
+:root,
+body
+{
+	font     : 400 1rem/100% 'Baloo 2', cursive;
+	position : absolute;
+	overflow : hidden;
+	color    : $black-200;
+	inset    : 0 0 0 0;
+}
+
+// ChatEngineUpdate
+.ce-chat-list-column
+{
+	padding-left : 10px !important;
+
+	.ce-chat-list
+	{
+		border-color : $white-400 !important;
+
+		&:hover::-webkit-scrollbar-thumb
+		{
+			background-color : $white-400 !important;
+		}
+	}
+}
+
+.ce-chat-feed-column
+{
+	.ce-chat-subtitle-text
+	{
+		margin-top : 5px;
+	}
+
+	.ce-social-message-form-container
+	{
+		padding-top : 10px !important;
+		border-top  : 1px solid $white-400 !important;
+
+		.ce-message-images-row
+		{
+			padding-left : 10px !important;
+
+			> div
+			{
+				padding : 0 !important;
+
+				> img
+				{
+					padding      : 4px !important;
+					border-color : rgb(64, 169, 255) !important;
+				}
+			}
+		}
+
+		.ce-message-files-row
+		{
+			padding-left : 10px !important;
+
+		}
+
+		.ce-social-message-form
+		{
+			padding-top : 0 !important;
+
+			> button
+			{
+				bottom      : 9px !important;
+				display     : grid !important;
+				place-items : center !important;
+
+				> img
+				{
+					width       : 20px !important;
+					height      : 20px !important;
+					margin-left : 4px !important;
+					transform   : rotate(0) !important;
+				}
+			}
+
+			.ce-message-input-form
+			{
+				height  : 46px !important;
+				padding : 0 !important;
+
+				#msg-textarea
+				{
+					left    : 10px !important;
+					height  : 36px !important;
+					padding : 0 !important;
+				}
+			}
+		}
+	}
+}
+
+.ce-settings-column
+{
+	.ce-settings
+	{
+		border-left-color : $white-400 !important;
+
+		&:hover::-webkit-scrollbar-thumb
+		{
+			background-color : $white-400 !important;
+		}
+
+		.ce-settings-container
+		{
+			width : calc(95% + 10px) !important;
+		}
+	}
+}
