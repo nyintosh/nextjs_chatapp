@@ -36,8 +36,9 @@ const Chats = () => {
 					projectID='745ae7de-e017-4c11-a8c6-1d1ad410f103'
 					userName={username}
 					userSecret={secret}
-					height={'calc(100vh - 40px)'}
+					height={'calc(100vh - 20px)'}
 					renderNewMessageForm={() => <MessageFormSocial />}
+					offset={+6}
 				/>
 			</div>
 		</div>
